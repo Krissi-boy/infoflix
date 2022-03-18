@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+  <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
 <?php
@@ -32,15 +35,41 @@ $kobling->set_charset("utf8");
 $sql = "SELECT * FROM film";
 $resultat = $kobling->query($sql);
 
-echo "Spørringen $sql ga $resultat->num_rows radar.";
+echo "Spørringen $sql ga $resultat->num_rows titler.<br>";
+
 
 while($rad = $resultat->fetch_assoc()) {
-    $film_id = $rad["film_id"]
-    $filmnavn = $rad["filmnavn"];
+    $tittel= $rad["tittel"];
+    $varighet = $rad["varighet"];
+    $rating = $rad["rating"];
+    $årstall = $rad["årstall"];
+    $land = $rad["land"];
+    $awards = $rad["awards"];
+    $trailer = $rad["trailer"];
+    $språk = $rad["språk"];
 
-    echo "$film_id $filmnavn <br>";
+
+    echo 
+    "<h1> <p>$tittel</p></h1>
+    
+    varighet: <p>$varighet
+    
+    rating: <p>$rating</p>
+    
+    årstall: $årstall
+    
+    land: $land 
+    
+    awards: $awards
+    
+    trailer: $trailer
+    
+    språk: $språk</p>";
 }
 
-?>   
+
+
+
+?> 
 </body>
 </html>
