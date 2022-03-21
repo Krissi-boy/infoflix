@@ -2,3 +2,20 @@ p{
     padding: 10px;
 }
 
+
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: orange;
+    border: 1px solid;
+    padding: 5px;
+}
+
+td {
+    background-color: aqua;
+    border: 1px solid;
+    padding: 5px;
+}

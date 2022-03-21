@@ -32,10 +32,26 @@ if ($kobling->connect_error) {
 // Angi UTF-8 som tegnesett
 $kobling->set_charset("utf8");
 
-$sql = "SELECT * FROM film";
+$sql = "SELECT * FROM film JOIN sjanger ON film.idsjanger=sjanger.idsjanger";
 $resultat = $kobling->query($sql);
 
 echo "Spørringen $sql ga $resultat->num_rows titler.<br>";
+
+
+echo "<table>";
+ echo "    <tr>
+ <th>TITTEL</th>
+ <th>SJANGER</th>
+ <th>TRAILER</th>
+ <th>LAND</th>
+ <th>ÅRSTALL</th>
+ <th>SPRÅK</th>
+ <th>VARIGHET</th>
+ <th>RATING</th>
+ <th>AWARDS</th>
+
+ </tr>
+ ";
 
 
 while($rad = $resultat->fetch_assoc()) {
@@ -47,27 +63,30 @@ while($rad = $resultat->fetch_assoc()) {
     $awards = $rad["awards"];
     $trailer = $rad["trailer"];
     $språk = $rad["språk"];
+    $sjanger = $rad["navn"];
 
 
-    echo 
-    "<h1> <p>$tittel</p></h1>
+    echo "
+
+    <tr> 
     
-    varighet: <p>$varighet
-    
-    rating: <p>$rating</p>
-    
-    årstall: $årstall
-    
-    land: $land 
-    
-    awards: $awards
-    
-    trailer: $trailer
-    
-    språk: $språk</p>";
+    <td>$tittel</td>
+    <td>$sjanger</td>
+    <td>$trailer</td>
+    <td>$land</td>
+    <td>$årstall</td>
+    <td>$språk</td>
+    <td>$varighet</td>
+    <td>$rating</td>
+    <td>$awards</td>
+    </tr>
+
+   ";
+
+  
 }
 
-
+ echo" </table>";
 
 
 ?> 
