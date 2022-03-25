@@ -39,7 +39,8 @@ echo "Spørringen $sql ga $resultat->num_rows titler.<br>";
 
 
 echo "<table>";
- echo "    <tr>
+ echo "<tr>
+ 
  <th>TITTEL</th>
  <th>SJANGER</th>
  <th>TRAILER</th>
@@ -64,7 +65,7 @@ while($rad = $resultat->fetch_assoc()) {
     $trailer = $rad["trailer"];
     $språk = $rad["språk"];
     $sjanger = $rad["navn"];
-
+    $YouTube = $rad["filnavn"];
 
     echo "
 
@@ -72,7 +73,7 @@ while($rad = $resultat->fetch_assoc()) {
     
     <td>$tittel</td>
     <td>$sjanger</td>
-    <td>$trailer</td>
+    <td>$trailer <iframe width='560' height='315' src='https://www.youtube.com/embed/$YouTube' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></td>
     <td>$land</td>
     <td>$årstall</td>
     <td>$språk</td>

@@ -9,13 +9,27 @@ table {
 }
 
 th {
-    background-color: orange;
-    border: 1px solid;
-    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    border: 3px solid;
+    padding: 1px;
+    font-family: "century gothic", Arial, Helvetica, sans-serif serif,;
+    font-size: 30px;
+    color: rgb(249, 255, 162);
+
+    
 }
 
 td {
-    background-color: aqua;
-    border: 1px solid;
-    padding: 5px;
+    background-color: rgb(0, 255, 98);
+    border: 3px solid;
+    padding: 3px;
+    font-family: "century gothic", lydian;
+    color: black;
+    font-size: 17px;
+    height: 100px;
+    text-align: center;
 }
+
+
+
+
