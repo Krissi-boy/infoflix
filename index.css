@@ -30,6 +30,26 @@ td {
     text-align: center;
 }
 
+ul {
+    list-style-type: none; /* fjerner kulepunkter */
+    margin: 0; /* fjerner alle mellomrom */
+    padding: 0; /* fjerner alle mellomrom */
+}
+ul a {
+    display: block; /* gjør om lenker til block */
+    width: 120px; /* bredde på boks */
+    padding: 10px; /*avstand mellom bokskant og innhold */
+    border-radius: 5px; /* avrunder kant */
+    margin: 2px; /* avstand mellom bokser */
+    color: #333333; /* mørkegrå tekst
+    font-weight: bold; /* fet tekst */
+    text-decoration: none; /* fjerner understrek */
+    background-color: #8cbe05; /* grønn */
+}
+ul a:hover {
+    background-color: #e7f1cc; /* lys grønn */
+}
+
 
 
 
