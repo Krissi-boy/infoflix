@@ -19,24 +19,9 @@
 </head>
 <body>
 <?php
-// Tilkoblingsinformasjon
-$tjener = "localhost";
-$brukernavn = "root";
-$passord = "";
-$database = "school_flix"; // Denne vil variere
 
-// Oprette en kobling
-$kobling = new mysqli ($tjener, $brukernavn, $passord, $database);
+include 'kobling.php';
 
-// Sjekk om koblingen virker
-if ($kobling->connect_error) {
-    die("noe gikk galt: " . $kobling->connect_error);
-} else {
-    echo "koblingen virker.<br>";
-}   
-
-// Angi UTF-8 som tegnesett
-$kobling->set_charset("utf8");
 
 $sql = "SELECT * FROM film JOIN sjanger ON film.idsjanger=sjanger.idsjanger";
 $resultat = $kobling->query($sql);
@@ -49,7 +34,6 @@ echo "<table>";
  
  <th>TITTEL</th>
  <th>SJANGER</th>
- <th>TRAILER</th>
  <th>LAND</th>
  <th>ÅRSTALL</th>
  <th>SPRÅK</th>
@@ -68,18 +52,17 @@ while($rad = $resultat->fetch_assoc()) {
     $årstall = $rad["årstall"];
     $land = $rad["land"];
     $awards = $rad["awards"];
-    $trailer = $rad["trailer"];
     $språk = $rad["språk"];
     $sjanger = $rad["navn"];
     $YouTube = $rad["filnavn"];
+    $idfilm = $rad["idfilm"];
 
     echo "
 
     <tr> 
     
-    <td>$tittel</td>
+    <td>$tittel<a href='vis_film.php?film=$idfilm'> Visning </a>  </td>
     <td>$sjanger</td>
-    <td>$trailer <iframe width='560' height='315' src='https://www.youtube.com/embed/$YouTube' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></td>
     <td>$land</td>
     <td>$årstall</td>
     <td>$språk</td>
@@ -89,11 +72,9 @@ while($rad = $resultat->fetch_assoc()) {
     </tr>
 
    ";
+ //echo slutt
+    }
 
-  
-}
-
- echo" </table>";
 
 
 ?> 

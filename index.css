@@ -50,6 +50,11 @@ ul a:hover {
     background-color: #e7f1cc; /* lys grønn */
 }
 
+td tittel {
+    background-image: url("baywatch.jpg");
+    background-color: #cccccc;
+} 
+
 
 
 
