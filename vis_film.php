@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+
+<link rel="stylesheet" href="vis_film.css">
+
 </head>
-<body>
+<body> 
+<h1>TRAILER</h1>
+
     <?php 
         include 'kobling.php';
 
@@ -24,21 +30,24 @@
     $link = $film['filnavn'];
     
     ?>
-    <div class='innpakning'> 
+    <div class='innpakning'>
     <?php   
-   echo "<div> $tittel </div> ";
-        echo "<div> $varighet </div> ";
-        echo "<div> $beskrivelse </div> ";
-        echo "<div> $link </div>";   
-   ?>
-        <div><iframe width='560' height="315" 
-            src="https://www.youtube.com/embed/<?php echo $link;?>" 
+    ?>
+
+    
+        <div> <?php 
+        echo "<h1>$tittel</h1>";
+        ?>
+        </div>
+
+        <div>
+            <iframe src="https://www.youtube.com/embed/<?php echo $link;?>" 
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-            gyroscope; picture-in-picture" allowfullscreen></iframe>  
+            gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
         </div> 
     </div> <!-- lukker innpakning -->
-
-    ?>
+   
 </body>
 </html>
