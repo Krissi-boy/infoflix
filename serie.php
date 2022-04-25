@@ -38,22 +38,24 @@ echo "<table>";
 
 
 while($rad = $resultat->fetch_assoc()) {
+    $idserie = $rad["idserie"]; 
     $tittel= $rad["tittel"];
     $rating = $rad["rating"];
     $årstall = $rad["årstall"];
     $land = $rad["land"];
     $trailer = $rad["trailer"];
     $språk = $rad["språk"];
-    $sjanger = $rad["navn"];
+    $sjanger = $rad["navn"]; // hentes fra sjanger tabell
     $YouTube = $rad["filnavn"];
+   
 
     echo "
 
     <tr> 
     
-    <td>$tittel</td>
+    <td>$tittel <a href='vis_serie.php?serie=$idserie'> Visning  </a> </td>
     <td>$sjanger</td>
-    <td>$trailer <iframe width='560' height='315' src='https://www.youtube.com/embed/$YouTube' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></td>
+    <td>$trailer</td>
     <td>$land</td>
     <td>$årstall</td>
     <td>$språk</td>

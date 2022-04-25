@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-<link rel="stylesheet" href="vis_film.css">
+<link rel="stylesheet" href="vis_serie.css">
 
 </head>
 <body> 
@@ -15,17 +15,17 @@
         include 'kobling.php';
 
 
-    $id = $_GET['film'];
+    $id = $_GET['serie'];
 
-    $sql = "SELECT * FROM film JOIN sjanger ON film.idsjanger=sjanger.idsjanger WHERE idfilm='$id'";
+    $sql = "SELECT * FROM serie JOIN sjanger ON serie.idsjanger=sjanger.idsjanger WHERE idserie='$id'";
     $resultat = $kobling->query($sql);
 
-    $film = $resultat->fetch_assoc();
+    $serie = $resultat->fetch_assoc();
 
-    $tittel = $film["tittel"];
-    $varighet = $film["varighet"];
-    $beskrivelse = $film["beskrivelse"];
-    $link = $film['filnavn'];
+    $tittel = $serie["tittel"];
+    $varighet = $serie["varighet"];
+    $beskrivelse = $serie["beskrivelse"];
+    $link = $serie['filnavn'];
     
     ?>
     <div class='innpakning'>

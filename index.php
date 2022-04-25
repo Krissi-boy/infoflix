@@ -26,7 +26,7 @@ include 'kobling.php';
 $sql = "SELECT * FROM film JOIN sjanger ON film.idsjanger=sjanger.idsjanger";
 $resultat = $kobling->query($sql);
 
-echo "Spørringen $sql ga $resultat->num_rows titler.<br>";
+
 
 
 echo "<table>";
@@ -46,6 +46,7 @@ echo "<table>";
 
 
 while($rad = $resultat->fetch_assoc()) {
+    $idfilm = $rad["idfilm"]; 
     $tittel= $rad["tittel"];
     $varighet = $rad["varighet"];
     $rating = $rad["rating"];
@@ -53,15 +54,15 @@ while($rad = $resultat->fetch_assoc()) {
     $land = $rad["land"];
     $awards = $rad["awards"];
     $språk = $rad["språk"];
-    $sjanger = $rad["navn"];
+    $sjanger = $rad["navn"];  // hentes fra sjanger tabell
     $YouTube = $rad["filnavn"];
-    $idfilm = $rad["idfilm"];
+    
 
     echo "
 
     <tr> 
     
-    <td>$tittel<a href='vis_film.php?film=$idfilm'> Visning </a>  </td>
+    <td>$tittel<a href='vis_film.php?film=$idfilm'> Visning  </a> </td>
     <td>$sjanger</td>
     <td>$land</td>
     <td>$årstall</td>
