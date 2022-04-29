@@ -47,11 +47,16 @@ while($rad = $resultat->fetch_assoc()) {
     $språk = $rad["språk"];
     $sjanger = $rad["navn"]; // hentes fra sjanger tabell
     $YouTube = $rad["filnavn"];
+    $bilde = $rad["bilde"]
    
 
     echo "
 
     <tr> 
+      <td>
+        $tittel<a href='vis_serie.php?serie=$idserie'> Visning  </a> 
+        <img src='Bilder_serie/" . $bilde . "' alt='img'>;
+      </td> 
     
     <td>$tittel <a href='vis_serie.php?serie=$idserie'> Visning  </a> </td>
     <td>$sjanger</td>
@@ -60,6 +65,7 @@ while($rad = $resultat->fetch_assoc()) {
     <td>$årstall</td>
     <td>$språk</td>
     <td>$rating</td>
+    <td>$bilde</td>
     </tr>
 
    ";

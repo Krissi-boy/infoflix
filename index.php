@@ -18,6 +18,8 @@
 
 </head>
 <body>
+<a href=
+
 <?php
 
 include 'kobling.php';
@@ -56,13 +58,18 @@ while($rad = $resultat->fetch_assoc()) {
     $språk = $rad["språk"];
     $sjanger = $rad["navn"];  // hentes fra sjanger tabell
     $YouTube = $rad["filnavn"];
+    $bilde = $rad["bilde"];
+
     
 
     echo "
-
-    <tr> 
     
-    <td>$tittel<a href='vis_film.php?film=$idfilm'> Visning  </a> </td>
+    <tr> 
+      <td>
+        $tittel<a href='vis_film.php?film=$idfilm'> Visning  </a> 
+        <img src='Bilder_film/" . $bilde . "' alt='img'>;
+      </td> 
+
     <td>$sjanger</td>
     <td>$land</td>
     <td>$årstall</td>
@@ -70,8 +77,8 @@ while($rad = $resultat->fetch_assoc()) {
     <td>$varighet</td>
     <td>$rating</td>
     <td>$awards</td>
+    
     </tr>
-
    ";
  //echo slutt
     }
