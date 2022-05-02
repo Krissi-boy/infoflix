@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="index.css">
 
-  <h2>Meny</h2>
+  <h2>infoFLIX filmer</h2>
   <ul>
       <li><a href="serie.php">SERIE </a></li>
       <li><a href="index.php">FILM </a></li>
@@ -18,7 +18,7 @@
 
 </head>
 <body>
-<a href=
+
 
 <?php
 
@@ -66,8 +66,8 @@ while($rad = $resultat->fetch_assoc()) {
     
     <tr> 
       <td>
-        $tittel<a href='vis_film.php?film=$idfilm'> Visning  </a> 
-        <img class='bilde' src='Bilder_film/" . $bilde . "' alt='img'>;
+        $tittel<a href='vis_film.php?film=$idfilm'><br> Visning  <br></a> 
+        <img class='bilde' src='Bilder_film/" . $bilde . "' alt='img'>
       </td> 
 
     <td>$sjanger</td>

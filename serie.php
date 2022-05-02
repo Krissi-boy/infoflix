@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
 
-    <h2>Meny</h2>
+    <h2>infoFLIX serier</h2>
   <ul>
       <li><a href="serie.php">SERIE </a></li>
       <li><a href="index.php">FILM </a></li>
@@ -47,28 +47,26 @@ while($rad = $resultat->fetch_assoc()) {
     $språk = $rad["språk"];
     $sjanger = $rad["navn"]; // hentes fra sjanger tabell
     $YouTube = $rad["filnavn"];
-    $bilde = $rad["bilde"]
+    $bilde = $rad["bilde"];
    
 
     echo "
 
     <tr> 
       <td>
-        $tittel<a href='vis_serie.php?serie=$idserie'> Visning  </a> 
-        <img class='bilde' src='Bilder_serie/" . $bilde . "' alt='img'>;
+        $tittel<a href='vis_serie.php?serie=$idserie'><br> Visning <br> </a> 
+        <img class='bilde' src='Bilder_serie/" . $bilde . "' alt='img'>
       </td> 
     
-    <td>$tittel <a href='vis_serie.php?serie=$idserie'> Visning  </a> </td>
     <td>$sjanger</td>
     <td>$trailer</td>
     <td>$land</td>
     <td>$årstall</td>
     <td>$språk</td>
     <td>$rating</td>
-    <td>$bilde</td>
+    
     </tr>
-
-   ";
+    ";
 
   
 }
