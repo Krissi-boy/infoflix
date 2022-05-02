@@ -55,7 +55,7 @@ while($rad = $resultat->fetch_assoc()) {
     <tr> 
       <td>
         $tittel<a href='vis_serie.php?serie=$idserie'> Visning  </a> 
-        <img src='Bilder_serie/" . $bilde . "' alt='img'>;
+        <img class='bilde' src='Bilder_serie/" . $bilde . "' alt='img'>;
       </td> 
     
     <td>$tittel <a href='vis_serie.php?serie=$idserie'> Visning  </a> </td>

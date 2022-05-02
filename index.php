@@ -67,7 +67,7 @@ while($rad = $resultat->fetch_assoc()) {
     <tr> 
       <td>
         $tittel<a href='vis_film.php?film=$idfilm'> Visning  </a> 
-        <img src='Bilder_film/" . $bilde . "' alt='img'>;
+        <img class='bilde' src='Bilder_film/" . $bilde . "' alt='img'>;
       </td> 
 
     <td>$sjanger</td>
