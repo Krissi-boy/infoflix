@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="add.css">
+    <ul>
+        <li><a href="serie.php">SERIE </a></li><br>
+        <li><a href="index.php">FILM </a></li><br>
+        <li><a href="hovedmeny.php">HOVEDMENY </a></li>
+    </ul>
 </head>
 <body>
 

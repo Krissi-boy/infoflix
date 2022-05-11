@@ -11,11 +11,13 @@
   <link rel="stylesheet" href="index.css">
 
   <h2>infoFLIX filmer</h2>
-  <ul>
+    <ul>
       <li><a href="serie.php">SERIE </a></li>
-      <li><a href="index.php">FILM </a></li>
-  </ul>
-
+      <li><a href="index.php">FILM </a></li><br>
+      <li><a href="add_film.php">ADD FILM </a></li><br>
+    </ul>
+  
+  <h1>  <li><a href="hovedmeny.php">HOVEDMENY </a></li><br>  <h1>
 </head>
 <body>
 

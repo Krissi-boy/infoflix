@@ -11,7 +11,10 @@
   <ul>
       <li><a href="serie.php">SERIE </a></li>
       <li><a href="index.php">FILM </a></li>
+      <br><li><br><a href="add_serie.php">ADD SERIE </a></li>
   </ul>
+  
+  <h1>  <li><a href="hovedmeny.php">HOVEDMENY </a></li><br> <h1><br>
 
 </head>
 <body>
