@@ -17,10 +17,11 @@
       <li><a href="add_film.php">ADD FILM </a></li><br>
     </ul>
   
-  <h1>  <li><a href="hovedmeny.php">HOVEDMENY </a></li><br>  <h1>
+
 </head>
 <body>
 
+<h1> <li><a href="hovedmeny.php">HOVEDMENY </a></li><br> </h1>
 
 <?php
 
